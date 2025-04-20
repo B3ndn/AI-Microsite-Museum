@@ -78,8 +78,8 @@
 
         .museum-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 3rem 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 2.5rem 1.8rem;
             margin-top: 2.5rem;
         }
 
@@ -101,21 +101,9 @@
         }
 
         .site-cover {
-            height: 220px;
+            height: 180px;
             position: relative;
             overflow: hidden;
-        }
-
-        .site-cover::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke-width="0"/></svg>');
-            opacity: 0.03;
-            mix-blend-mode: overlay;
         }
 
         .site-cover .overlay {
@@ -138,7 +126,7 @@
         }
 
         .site-info {
-            padding: 1.5rem;
+            padding: 1.2rem;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -146,7 +134,7 @@
         }
 
         .site-title {
-            font-size: 1.35rem;
+            font-size: 1.2rem;
             margin-bottom: 0.5rem;
             font-weight: 400;
             color: var(--text-color);
@@ -154,9 +142,9 @@
         }
 
         .site-url {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--light-text);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             font-family: 'Menlo', monospace;
         }
 
@@ -211,44 +199,218 @@
         /* Responsive Styles */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.3rem;
             }
 
             .museum-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 2rem;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 1.8rem 1.5rem;
             }
 
             .site-cover {
-                height: 180px;
+                height: 160px;
+            }
+            
+            .site-title {
+                font-size: 1.1rem;
             }
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
 
             .header-description {
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
 
             .museum-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 1.5rem 1.2rem;
+            }
+            
+            .site-cover {
+                height: 150px;
+            }
+            
+            .site-info {
+                padding: 1rem;
+            }
+            
+            .site-title {
+                font-size: 1rem;
             }
         }
 
-        /* Additional series styling */
+        /* Custom site patterns with icons */
+        .site-cover svg {
+            width: 30%;
+            height: 30%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.15;
+            transition: var(--transition);
+            stroke: var(--primary-color);
+            fill: none;
+            stroke-width: 1;
+        }
+
+        .site-card:hover .site-cover svg {
+            opacity: 0.2;
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+
+        /* Card color variants - distinct watercolor styles */
+        .cover-pattern-1 {
+            background: linear-gradient(135deg, rgba(176, 201, 222, 0.7), rgba(159, 180, 214, 0.8), rgba(173, 189, 222, 0.6));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover-pattern-1::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 80% 40%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+            opacity: 0.5;
+        }
+        
+        .cover-pattern-2 {
+            background: linear-gradient(135deg, rgba(208, 192, 217, 0.7), rgba(189, 171, 208, 0.8), rgba(193, 177, 214, 0.6));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover-pattern-2::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+            opacity: 0.5;
+        }
+        
+        .cover-pattern-3 {
+            background: linear-gradient(135deg, rgba(183, 207, 214, 0.7), rgba(165, 196, 207, 0.8), rgba(146, 181, 194, 0.6));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover-pattern-3::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 60% 30%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+            opacity: 0.5;
+        }
+        
+        .cover-pattern-4 {
+            background: linear-gradient(135deg, rgba(218, 204, 182, 0.7), rgba(209, 193, 167, 0.8), rgba(196, 179, 152, 0.6));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover-pattern-4::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 20% 60%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+            opacity: 0.5;
+        }
+        
+        .cover-pattern-5 {
+            background: linear-gradient(135deg, rgba(195, 219, 195, 0.7), rgba(176, 207, 176, 0.8), rgba(162, 195, 162, 0.6));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover-pattern-5::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 40% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+            opacity: 0.5;
+        }
+        
+        .cover-pattern-6 {
+            background: linear-gradient(135deg, rgba(220, 188, 188, 0.7), rgba(210, 173, 173, 0.8), rgba(194, 152, 152, 0.6));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover-pattern-6::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 70% 25%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+            opacity: 0.5;
+        }
+        
+        .cover-pattern-7 {
+            background: linear-gradient(135deg, rgba(172, 192, 211, 0.7), rgba(150, 176, 201, 0.8), rgba(133, 163, 193, 0.6));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover-pattern-7::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 35% 45%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+            opacity: 0.5;
+        }
+        
+        .cover-pattern-8 {
+            background: linear-gradient(135deg, rgba(198, 184, 207, 0.7), rgba(184, 166, 197, 0.8), rgba(168, 148, 184, 0.6));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover-pattern-8::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 55% 65%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+            opacity: 0.5;
+        }
+
+        /* Series card specific styles */
         .series-card {
             position: relative;
         }
 
         .series-toggle {
             position: absolute;
-            bottom: 1.5rem;
-            right: 1.5rem;
-            width: 24px;
-            height: 24px;
+            bottom: 1.2rem;
+            right: 1.2rem;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
             background-color: var(--accent-color);
             color: white;
@@ -258,7 +420,7 @@
             cursor: pointer;
             transition: var(--transition);
             opacity: 0.8;
-            font-size: 1.2rem;
+            font-size: 1rem;
             line-height: 1;
             border: none;
             outline: none;
@@ -278,17 +440,19 @@
         }
 
         .series-essays.expanded {
-            max-height: 1000px;
+            max-height: 600px;
         }
 
         .essay-list {
             list-style: none;
-            padding: 1.5rem;
+            padding: 1.2rem;
+            max-height: 400px;
+            overflow-y: auto;
         }
 
         .essay-list li {
-            margin-bottom: 0.8rem;
-            padding-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
+            padding-bottom: 0.6rem;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
@@ -303,7 +467,8 @@
             color: var(--text-color);
             text-decoration: none;
             transition: var(--transition);
-            padding: 0.3rem 0;
+            padding: 0.2rem 0;
+            font-size: 0.9rem;
         }
 
         .essay-link:hover {
@@ -313,15 +478,15 @@
 
         .essay-number {
             display: inline-block;
-            width: 24px;
-            height: 24px;
-            line-height: 24px;
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
             text-align: center;
             background-color: var(--secondary-color);
             color: white;
             border-radius: 50%;
-            font-size: 0.8rem;
-            margin-right: 0.8rem;
+            font-size: 0.75rem;
+            margin-right: 0.6rem;
             opacity: 0.7;
         }
 
@@ -329,50 +494,13 @@
             display: inline-block;
             vertical-align: middle;
         }
-
-        .cover-pattern-8 {
-            background: linear-gradient(135deg, rgba(207, 216, 230, 0.7), rgba(193, 206, 224, 0.6), rgba(184, 198, 217, 0.5));
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cover-pattern-8::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at 45% 55%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 60%);
-            opacity: 0.6;
-        }
-
-        /* Custom site patterns with icons */
-        .site-cover svg {
-            width: 35%;
-            height: 35%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0.15;
-            transition: var(--transition);
-            stroke: var(--primary-color);
-            fill: none;
-            stroke-width: 1;
-        }
-
-        .site-card:hover .site-cover svg {
-            opacity: 0.2;
-            transform: translate(-50%, -50%) scale(1.05);
-        }
     </style>
 </head>
 <body>
     <header>
         <h1>AI Microsite Museum</h1>
-                    <p class="header-description">
-            A curated collection of notable AI-focused microsites, essays, and projects shaping our understanding of artificial intelligence and its future.
+        <p class="header-description">
+            A curated collection of notable AI-focused microsites, essays, and projects shaping our understanding of artificial intelligence and its future. More microsites will be added over time, and we'll eventually offer a mailing list so you can stay informed when new noteworthy ones are published.
         </p>
     </header>
 
@@ -504,7 +632,28 @@
                 </div>
             </div>
 
-            <!-- NEW: Essay Series Card -->
+            <!-- Site 7 -->
+            <div class="site-card">
+                <a href="https://situational-awareness.ai" target="_blank" rel="noopener noreferrer">
+                    <div class="site-cover cover-pattern-7">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm3 3c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm4.5-4.5C21 9.17 22 11.17 22 13c0 1.83-1 3.83-2.5 5.5L18 17c1-1.33 2-2.83 2-4 0-1.17-1-2.67-2-4l1.5-1.5zM12 1C8.69 1 5.55 2.15 3.18 4.15L1.83 1.83 3 6.91 8.08 8.08 5.76 6.76 3.54 4.54C5.55 2.89 8.69 2 12 2s6.45.89 8.46 2.54l-1.22 2.22 2.32 1.32L21.56 3 18.82 4.15C16.45 2.15 13.31 1 10 1h2z"></path>
+                        </svg>
+                        <div class="overlay">
+                            <span class="visit-btn">Read in Full</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="site-info">
+                    <h2 class="site-title">Situational Awareness</h2>
+                    <p class="site-url">situational-awareness.ai</p>
+                    <a href="https://situational-awareness.ai" target="_blank" rel="noopener noreferrer" class="visit-btn">
+                        Read in Full
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Essay Series Card -->
             <div class="site-card series-card">
                 <div class="site-cover cover-pattern-8">
                     <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
