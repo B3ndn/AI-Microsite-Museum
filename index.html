@@ -144,8 +144,16 @@
         .site-url {
             font-size: 0.8rem;
             color: var(--light-text);
-            margin-bottom: 1.2rem;
+            margin-bottom: 0.6rem;
             font-family: 'Menlo', monospace;
+        }
+        
+        .site-authors {
+            font-size: 0.85rem;
+            color: var(--light-text);
+            margin-bottom: 1.2rem;
+            font-style: italic;
+            line-height: 1.4;
         }
 
         .visit-btn {
@@ -500,13 +508,69 @@
     <header>
         <h1>AI Microsite Museum</h1>
         <p class="header-description">
-            A curated collection of notable AI-focused microsites, essays, and projects shaping our understanding of artificial intelligence and its future. More microsites will be added over time, and we'll eventually offer a mailing list so you can stay informed when new noteworthy ones are published.
-        </p>
+            A curated collection of notable AI-focused microsites, essays, and projects shaping our understanding of the dawn of artificial general intelligence.
     </header>
 
     <main>
         <div class="museum-grid">
-            <!-- Site 1 -->
+            <!-- The Intelligence Curse - Now the first card -->
+            <div class="site-card series-card">
+                <a href="https://intelligence-curse.ai" target="_blank" rel="noopener noreferrer">
+                    <div class="site-cover cover-pattern-8">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"></path>
+                        </svg>
+                        <div class="overlay">
+                            <span class="visit-btn">Explore Series</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="site-info">
+                    <h2 class="site-title">The Intelligence Curse</h2>
+                    <p class="site-url">intelligence-curse.ai</p>
+                    <p class="site-authors">Luke Drago and Rudolf Laine</p>
+                    <a href="https://intelligence-curse.ai" target="_blank" rel="noopener noreferrer" class="visit-btn">
+                        Read Series
+                    </a>
+                    <button class="series-toggle" aria-label="Expand essay list">+</button>
+                </div>
+                <div class="series-essays">
+                    <ul class="essay-list">
+                        <li>
+                            <a href="https://intelligence-curse.ai/essay/introduction" target="_blank" rel="noopener noreferrer" class="essay-link">
+                                <span class="essay-number">1</span>
+                                <span class="essay-title">Introduction to the Intelligence Curse</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://intelligence-curse.ai/essay/philosophy" target="_blank" rel="noopener noreferrer" class="essay-link">
+                                <span class="essay-number">2</span>
+                                <span class="essay-title">The Philosophy of Intelligence</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://intelligence-curse.ai/essay/historical-examples" target="_blank" rel="noopener noreferrer" class="essay-link">
+                                <span class="essay-number">3</span>
+                                <span class="essay-title">Historical Examples of the Curse</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://intelligence-curse.ai/essay/modern-implications" target="_blank" rel="noopener noreferrer" class="essay-link">
+                                <span class="essay-number">4</span>
+                                <span class="essay-title">Modern Implications</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://intelligence-curse.ai/essay/future-directions" target="_blank" rel="noopener noreferrer" class="essay-link">
+                                <span class="essay-number">5</span>
+                                <span class="essay-title">Future Directions</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Site 1 - Gradual Disempowerment -->
             <div class="site-card">
                 <a href="https://gradual-disempowerment.ai" target="_blank" rel="noopener noreferrer">
                     <div class="site-cover cover-pattern-1">
@@ -521,13 +585,14 @@
                 <div class="site-info">
                     <h2 class="site-title">Gradual Disempowerment</h2>
                     <p class="site-url">gradual-disempowerment.ai</p>
+                    <p class="site-authors">Jan Kulveit, Raymond Douglas, Nora Ammann, Deger Turan, David Krueger, David Duvenaud</p>
                     <a href="https://gradual-disempowerment.ai" target="_blank" rel="noopener noreferrer" class="visit-btn">
                         Read in Full
                     </a>
                 </div>
             </div>
 
-            <!-- Site 2 -->
+            <!-- Site 2 - Superintelligence Strategy -->
             <div class="site-card">
                 <a href="https://www.nationalsecurity.ai" target="_blank" rel="noopener noreferrer">
                     <div class="site-cover cover-pattern-2">
@@ -542,13 +607,14 @@
                 <div class="site-info">
                     <h2 class="site-title">Superintelligence Strategy</h2>
                     <p class="site-url">nationalsecurity.ai</p>
+                    <p class="site-authors">Dan Hendrycks, Eric Schmidt, Alexandr Wang</p>
                     <a href="https://www.nationalsecurity.ai" target="_blank" rel="noopener noreferrer" class="visit-btn">
                         Read in Full
                     </a>
                 </div>
             </div>
 
-            <!-- Site 3 -->
+            <!-- Site 3 - Machines of Loving Grace -->
             <div class="site-card">
                 <a href="https://www.darioamodei.com/essay/machines-of-loving-grace" target="_blank" rel="noopener noreferrer">
                     <div class="site-cover cover-pattern-3">
@@ -563,13 +629,14 @@
                 <div class="site-info">
                     <h2 class="site-title">Machines of Loving Grace</h2>
                     <p class="site-url">darioamodei.com/essay/machines-of-loving-grace</p>
+                    <p class="site-authors">Dario Amodei</p>
                     <a href="https://www.darioamodei.com/essay/machines-of-loving-grace" target="_blank" rel="noopener noreferrer" class="visit-btn">
                         Read in Full
                     </a>
                 </div>
             </div>
 
-            <!-- Site 4 -->
+            <!-- Site 4 - A Narrow Path -->
             <div class="site-card">
                 <a href="https://www.narrowpath.co" target="_blank" rel="noopener noreferrer">
                     <div class="site-cover cover-pattern-4">
@@ -582,15 +649,16 @@
                     </div>
                 </a>
                 <div class="site-info">
-                    <h2 class="site-title">The Narrow Path</h2>
+                    <h2 class="site-title">A Narrow Path</h2>
                     <p class="site-url">narrowpath.co</p>
+                    <p class="site-authors">Andrea Miotti, Tolga Bilge, Dave Kasten, James Newport</p>
                     <a href="https://www.narrowpath.co" target="_blank" rel="noopener noreferrer" class="visit-btn">
                         Read in Full
                     </a>
                 </div>
             </div>
 
-            <!-- Site 5 -->
+            <!-- Site 5 - The Compendium -->
             <div class="site-card">
                 <a href="https://www.thecompendium.ai" target="_blank" rel="noopener noreferrer">
                     <div class="site-cover cover-pattern-5">
@@ -605,13 +673,14 @@
                 <div class="site-info">
                     <h2 class="site-title">The Compendium</h2>
                     <p class="site-url">thecompendium.ai</p>
+                    <p class="site-authors">Connor Leahy, Gabriel Alfour, Chris Scammell, Andrea Miotti, Adam Shimi</p>
                     <a href="https://www.thecompendium.ai" target="_blank" rel="noopener noreferrer" class="visit-btn">
                         Read in Full
                     </a>
                 </div>
             </div>
 
-            <!-- Site 6 -->
+            <!-- Site 6 - AI 2027 -->
             <div class="site-card">
                 <a href="https://ai-2027.com" target="_blank" rel="noopener noreferrer">
                     <div class="site-cover cover-pattern-6">
@@ -626,13 +695,14 @@
                 <div class="site-info">
                     <h2 class="site-title">AI 2027</h2>
                     <p class="site-url">ai-2027.com</p>
+                    <p class="site-authors">Daniel Kokotajlo, Scott Alexander, Thomas Larsen, Eli Lifland, Romeo Dean</p>
                     <a href="https://ai-2027.com" target="_blank" rel="noopener noreferrer" class="visit-btn">
                         Read in Full
                     </a>
                 </div>
             </div>
 
-            <!-- Site 7 -->
+            <!-- Site 7 - Situational Awareness -->
             <div class="site-card">
                 <a href="https://situational-awareness.ai" target="_blank" rel="noopener noreferrer">
                     <div class="site-cover cover-pattern-7">
@@ -647,99 +717,10 @@
                 <div class="site-info">
                     <h2 class="site-title">Situational Awareness</h2>
                     <p class="site-url">situational-awareness.ai</p>
+                    <p class="site-authors">Leopold Aschenbrenner</p>
                     <a href="https://situational-awareness.ai" target="_blank" rel="noopener noreferrer" class="visit-btn">
                         Read in Full
                     </a>
-                </div>
-            </div>
-            
-            <!-- Essay Series Card -->
-            <div class="site-card series-card">
-                <div class="site-cover cover-pattern-8">
-                    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"></path>
-                    </svg>
-                    <div class="overlay">
-                        <span class="visit-btn">Explore Series</span>
-                    </div>
-                </div>
-                <div class="site-info">
-                    <h2 class="site-title">Otherness and control in the age of AGI</h2>
-                    <p class="site-url">lesswrong.com/s/BbAvHtorCZqp97X9W</p>
-                    <a href="https://www.lesswrong.com/s/BbAvHtorCZqp97X9W" target="_blank" rel="noopener noreferrer" class="visit-btn">
-                        Read Series
-                    </a>
-                    <button class="series-toggle" aria-label="Expand essay list">+</button>
-                </div>
-                <div class="series-essays">
-                    <ul class="essay-list">
-                        <li>
-                            <a href="https://www.lesswrong.com/s/BbAvHtorCZqp97X9W/p/TtkfjskkAurvEN8Fa" target="_blank" rel="noopener noreferrer" class="essay-link">
-                                <span class="essay-number">1</span>
-                                <span class="essay-title">Otherness and control in the age of AGI</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.lesswrong.com/s/BbAvHtorCZqp97X9W/p/mzvu8QTRXdvDReCAL" target="_blank" rel="noopener noreferrer" class="essay-link">
-                                <span class="essay-number">2</span>
-                                <span class="essay-title">Gentleness and the artificial Other</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.lesswrong.com/s/BbAvHtorCZqp97X9W/p/sJPbmm8Gd34vGYrKd" target="_blank" rel="noopener noreferrer" class="essay-link">
-                                <span class="essay-number">3</span>
-                                <span class="essay-title">Deep atheism and AI risk</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.lesswrong.com/s/BbAvHtorCZqp97X9W/p/fPajcaopbQ7pxztf4" target="_blank" rel="noopener noreferrer" class="essay-link">
-                                <span class="essay-number">4</span>
-                                <span class="essay-title">When "yang" goes wrong</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.lesswrong.com/s/BbAvHtorCZqp97X9W/p/aBmBaL95hrNLvqJse" target="_blank" rel="noopener noreferrer" class="essay-link">
-                                <span class="essay-number">5</span>
-                                <span class="essay-title">Does AI risk "other" the AIs?</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.lesswrong.com/s/BbAvHtorCZqp97X9W/p/cnv5g7jCWLw9LYKxa" target="_blank" rel="noopener noreferrer" class="essay-link">
-                                <span class="essay-number">6</span>
-                                <span class="essay-title">An even deeper atheism</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.lesswrong.com/s/BbAvHtorCZqp97X9W/p/rdTgtHn3neGzkyCrL" target="_blank" rel="noopener noreferrer" class="essay-link">
-                                <span class="essay-number">7</span>
-                                <span class="essay-title">Being nicer than Clippy</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.lesswrong.com/s/BbAvHtorCZqp97X9W/p/oJRMDAvWk8diDjNsG" target="_blank" rel="noopener noreferrer" class="essay-link">
-                                <span class="essay-number">8</span>
-                                <span class="essay-title">On the abolition of man</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.lesswrong.com/s/BbAvHtorCZqp97X9W/p/gvNnE6Th594kfdB3z" target="_blank" rel="noopener noreferrer" class="essay-link">
-                                <span class="essay-number">9</span>
-                                <span class="essay-title">On green</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.lesswrong.com/s/BbAvHtorCZqp97X9W/p/us8cqwudP5sePqWM2" target="_blank" rel="noopener noreferrer" class="essay-link">
-                                <span class="essay-number">10</span>
-                                <span class="essay-title">On attunement</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.lesswrong.com/s/BbAvHtorCZqp97X9W/p/iqNjYdsectt5TvJRh" target="_blank" rel="noopener noreferrer" class="essay-link">
-                                <span class="essay-number">11</span>
-                                <span class="essay-title">Loving a world you don't trust</span>
-                            </a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
