@@ -69,6 +69,46 @@
             line-height: 1.6;
         }
 
+        /* Tweet Container */
+        .tweet-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            background-color: var(--card-color);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 1rem;
+            transition: var(--transition);
+        }
+
+        .tweet-container:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .tweet-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 0.8rem;
+        }
+
+        .tweet-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-top: 0.5rem;
+        }
+
+        .tweet-caption a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .tweet-caption a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
         /* Main Content */
         main {
             max-width: 1250px;
@@ -221,6 +261,10 @@
             
             .site-title {
                 font-size: 1.1rem;
+            }
+            
+            .tweet-container {
+                max-width: 90%;
             }
         }
 
@@ -511,6 +555,14 @@
             A curated collection of notable AI-focused microsites, essays, and projects shaping our understanding of artificial intelligence and its future. More microsites will be added over time, and we'll eventually offer a mailing list so you can stay informed when new noteworthy ones are published.
         </p>
     </header>
+
+    <!-- Added Tweet Container with Imgur Image -->
+    <div class="tweet-container">
+        <img src="https://i.imgur.com/wOA5ANf.png" alt="Caleb Watney tweet about the AI microsites microsite" class="tweet-image">
+        <p class="tweet-caption">
+            <a href="https://x.com/calebwatney/status/1915445474678427789" target="_blank" rel="noopener noreferrer">It exists now! View the original tweet.</a>
+        </p>
+    </div>
 
     <main>
         <div class="museum-grid">
